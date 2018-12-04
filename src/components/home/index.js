@@ -26,7 +26,7 @@ class Home extends Component {
 
     getUserData = () => {
         const self = this;
-        axios.get('https://restful-c8ce2.firebaseapp.com/api/users').then(function (response) {
+        axios.get('xxx').then(function (response) {
             self.pagePagination(response.data.result);
             self.setState({
                 userData: response.data.result,
@@ -37,7 +37,7 @@ class Home extends Component {
 
     getUserDataByID = (userID) => {
         const self = this;
-        axios.get('https://restful-c8ce2.firebaseapp.com/api/users/'+userID).then(function (response) {
+        axios.get('xxx/xxx'+userID).then(function (response) {
             self.setState({
                 editName: response.data.result.name,
                 editEmail: response.data.result.email,
@@ -49,7 +49,7 @@ class Home extends Component {
 
     createUserData = (addUserData) => {
         const self = this;
-        axios.post('https://restful-c8ce2.firebaseapp.com/api/users', addUserData).then(function (response) {
+        axios.post('xxx/xxx', addUserData).then(function (response) {
             self.setState({
                 inputName: '',
                 inputEmail: ''
@@ -60,7 +60,7 @@ class Home extends Component {
 
     updateUserData = (userID, editUserData) => {
         const self = this;
-        axios.put('https://restful-c8ce2.firebaseapp.com/api/users/'+userID, editUserData).then(function (response) {
+        axios.put('xxx/xxx'+userID, editUserData).then(function (response) {
             self.setState({
                 editID: '',
                 editName: '',
@@ -72,7 +72,7 @@ class Home extends Component {
 
     deleteUserData = (userID) => {
         const self = this;
-        axios.delete('https://restful-c8ce2.firebaseapp.com/api/users/'+userID).then(function (response) {
+        axios.delete('xxx/xxx'+userID).then(function (response) {
             self.setState({
                 editID: ''
             });
